@@ -18,7 +18,14 @@ imports = [
 ## Modules
 
 ### Basic
+`tmux.nix` - tmux is a command line terminal multiplexer, comparable to screen or Terminator. tmux makes it possible to create and manage various virtual console sessions within a terminal or terminal emulation.
 
+`nixvim.nix` - nixvim is a NixOS module to configure the whole behavior of NeoVim within a nix-module. No extra configfiles or plugin are required. 
 
+`zsh.nix` - This module config the whole `zsh` shell environment including `Oh-my-ZSH` and theming. 
+
+`syncthing.nix` - I sync my Obsidian Vault via `Syncthing` to my iPhone. 
+
+`qmk.nix` - If you build keyboards and keyboard-layouts you will need a firmware. In my case it is mainly the QMK. This module activate all the needed options to use `QMK` within NixOS.
 
 ### Server
