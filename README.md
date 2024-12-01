@@ -28,4 +28,6 @@ imports = [
 
 `qmk.nix` - If you build keyboards and keyboard-layouts you will need a firmware. In my case it is mainly the QMK. This module activate all the needed options to use `QMK` within NixOS.
 
+`lazygit.nix` - The whole Lazyvim config without any separate dotfile declared in nix. 
+
 ### Server
