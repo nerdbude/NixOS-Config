@@ -1,3 +1,9 @@
+#----------------------------
+# MODULE: syncthing.nix
+# TODO: 
+#       - check sync folders
+#----------------------------
+#
 { config, pkgs, ... }:
 
 {
