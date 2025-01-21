@@ -179,11 +179,7 @@
                 , ("M-C-k", sendMessage MirrorExpand)
                 , ("M-S-;", sendMessage zoomReset)
                 , ("M-;", sendMessage ZoomFullToggle)
-        
-            -- Scratchpads
-                , ("M-C-<Return>", namedScratchpadAction myScratchPads "terminal")
-                , ("M-C-c", namedScratchpadAction myScratchPads "cmus")
-        
+       
             -- Open Terminal (Mod+Enter)
                 , ("M-<Return>", spawn myTerminal)
             --- Firefox
@@ -220,7 +216,7 @@
               , title =? "Vivaldi"         --> doShift "<action=xdotool key super+1>www</action>"
               , title =? "irssi"           --> doShift "<action=xdotool key super+9>irc</action>"
               , (className =? "Firefox" <&&> resource =? "Dialog") --> doFloat  -- Float Firefox Dialog
-            ] <+> namedScratchpadManageHook myScratchPads
+            ] 
         
         ------------------------------------------------------------------------
         --- LAYOUTS
@@ -257,32 +253,6 @@
 	            , decoHeight			= 12 
         
         }
-        
-        ------------------------------------------------------------------------
-        ---SCRATCHPADS
-        ------------------------------------------------------------------------
-        --
-        -- myScratchPads = [ NS "terminal" spawnTerm findTerm manageTerm
-        --                , NS "cmus" spawnCmus findCmus manageCmus
-        --               ]
-       -- 
-       --       where
-       --         spawnTerm  = myTerminal ++  " -n scratchpad"
-       --         findTerm   = resource =? "scratchpad"
-       --         manageTerm = customFloating $ W.RationalRect l t w h
-       --                 where
-       --                   h = 0.9
-       --                   w = 0.9
-       --                   t = 0.95 -h
-       --                   l = 0.95 -w
-       --             spawnCmus  = myTerminal ++  " -n cmus 'cmus'"
-       --             findCmus   = resource =? "cmus"
-       --             manageCmus = customFloating $ W.RationalRect l t w h
-       --                  where
-       --                     h = 0.9
-       --                     w = 0.9
-       --                     t = 0.95 -h
-       --                     l = 0.95 -w
       '';
       enableConfiguredRecompile = true;
     };
