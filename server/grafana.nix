@@ -12,4 +12,12 @@
       };
     };
   };
+
+  services.nginx.virtualHosts."192.168.0.136" = {
+    locations."/grafana/" = {
+      proxyPass = "https://$toString config.services.grafana.settings.server.http_addr}:${toString config.services.grafana.settings.server.http_port}";
+      proxyWebsockets = true;
+      recommendedProxySettings = true;
+    };
+  };
 }
