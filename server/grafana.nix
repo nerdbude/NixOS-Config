@@ -10,6 +10,7 @@
         serve_from_sub_path = true;
       };
     };
+  };
 
   services.nginx.virtualHosts."s.192.168.0.136" = {
     locations."/grafana/" = {
