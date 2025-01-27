@@ -2,29 +2,22 @@
 {
   services.grafana = {
     enable = true;
-    settings = {
-      server = {
-        http_addr = "127.0.0.1";
-        http_port = 3000;
-        domain = "s.kyb3r.space";
-        serve_from_sub_path = true;
-      };
-    };
+    domain = "DOMAIN";  # CHANGE THE DOMAIN
+    port = 2342;
+    addr = "127.0.0.1";
   };
 
-  services.nginx.virtualHosts."s.kyb3r.space" = {
-    addSSL = true;
+  services.nginx.virtualHosts.${config.services.grafana.domain} = {
     enableACME = true;
-    locations."/grafana/" = {
-      proxyPass = "http://${toString config.services.grafana.settings.server.http_addr}:${toString config.services.grafana.settings.server.http_port}";
-      proxyWebsockets = true;
-      recommendedProxySettings = true;
+    forceSSL = true;
+    locations."/" = {
+        proxyPass = "http://127.0.0.1:${toString config.services.grafana.port}";
+        proxyWebsockets = true;
     };
   };
 
   security.acme.acceptTerms = true;
   security.acme.certs = {
-    "s.kyb3r.space".email = "post@nerdbude.com";
+    "DOMAIN".email = "post@nerdbude.com";  # CHANGE THE DOMAIN
   };
-
 }
