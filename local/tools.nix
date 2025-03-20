@@ -53,6 +53,7 @@
     watchmate
     zathura
     newsboat
+    zellij
 
     # HASKELL
     ghc
