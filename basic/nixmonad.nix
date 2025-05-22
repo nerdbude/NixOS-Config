@@ -80,36 +80,36 @@
         myTerminal      = "alacritty"
         myTextEditor    = "nvim"
         myBorderWidth   = 2
-        windowCount     = gets $ Just . show . length . W.integrate' . W.stack . W.workspace . W.current . windowset
+        -- windowCount     = gets $ Just . show . length . W.integrate' . W.stack . W.workspace . W.current . windowset
         
         main = do
             -- Launching XMobar with config
-            xmproc0 <- spawnPipe "xmobar -x 0"
+            --xmproc0 <- spawnPipe "xmobar -x 0"
             --xmproc1 <- spawnPipe "xmobar -x 1" -- For XMobar on other Displays in Multi-Monitor Setup
             --xmproc2 <- spawnPipe "xmobar -x 2" --
         
-            xmonad $ ewmh desktopConfig
+             xmonad $ ewmh desktopConfig
                 { manageHook = ( isFullscreen --> doFullFloat ) <+> myManageHook <+> manageHook desktopConfig <+> manageDocks
-                , logHook = dynamicLogWithPP xmobarPP
-                                { ppOutput = \x -> hPutStrLn xmproc0 x -- >> hPutStrLn xmproc1 x  >> hPutStrLn xmproc2 x
-                                , ppCurrent = xmobarColor "#FF79C6" "" . wrap "" "" -- Current workspace in xmobar
-                                , ppVisible = xmobarColor "#44475A" ""                -- Visible but not current workspace
-                                , ppHidden = xmobarColor "#BD93F9" "" . wrap "" ""   -- Hidden workspaces in xmobar
-                                , ppHiddenNoWindows = xmobarColor "#6272A4" ""        -- Hidden workspaces (no windows)
-                                , ppTitle = xmobarColor "#8BE9FD" "" . wrap "[ " " ]" . shorten 80     -- Title of active window in xmobar
-                                , ppSep =  "<fc=#50FA7B> :: </fc>"                     -- Separators
-                                , ppUrgent = xmobarColor "#FF55555" "" . wrap "!" "!"  -- Urgent workspace
-                                , ppExtras  = [windowCount]                           -- # of windows current workspace
-                                , ppOrder  = \(ws:l:t:ex) -> [ws,l]++ex++[t]
-                                }
+            --    , logHook = dynamicLogWithPP xmobarPP
+            --                   { ppOutput = \x -> hPutStrLn xmproc0 x -- >> hPutStrLn xmproc1 x  >> hPutStrLn xmproc2 x
+            --                    , ppCurrent = xmobarColor "#FF79C6" "" . wrap "" "" -- Current workspace in xmobar
+            --                    , ppVisible = xmobarColor "#44475A" ""                -- Visible but not current workspace
+            --                    , ppHidden = xmobarColor "#BD93F9" "" . wrap "" ""   -- Hidden workspaces in xmobar
+            --                    , ppHiddenNoWindows = xmobarColor "#6272A4" ""        -- Hidden workspaces (no windows)
+            --                    , ppTitle = xmobarColor "#8BE9FD" "" . wrap "[ " " ]" . shorten 80     -- Title of active window in xmobar
+            --                    , ppSep =  "<fc=#50FA7B> :: </fc>"                     -- Separators
+            --                    , ppUrgent = xmobarColor "#FF55555" "" . wrap "!" "!"  -- Urgent workspace
+            --                    , ppExtras  = [windowCount]                           -- # of windows current workspace
+            --                    , ppOrder  = \(ws:l:t:ex) -> [ws,l]++ex++[t]
+            --                    }
                 , modMask            = myModMask
                 , terminal           = myTerminal
                 , startupHook        = myStartupHook
                 , layoutHook         = myLayoutHook
                 , workspaces         = myWorkspaces
                 , borderWidth        = myBorderWidth
-                , normalBorderColor  = "#44475A"
-                , focusedBorderColor = "#BD93F9"
+                , normalBorderColor  = "#282A36"
+                , focusedBorderColor = "#282A36"
                 } `additionalKeysP`         myKeys
         
         ------------------------------------------------------------------------
@@ -179,11 +179,11 @@
                 , ("M-C-k", sendMessage MirrorExpand)
                 , ("M-S-;", sendMessage zoomReset)
                 , ("M-;", sendMessage ZoomFullToggle)
-       
+        
             -- Open Terminal (Mod+Enter)
                 , ("M-<Return>", spawn myTerminal)
             --- Firefox
-                , ("M-f", spawn "firefox")
+                , ("M-f", spawn "librewolf")
         
             --- ROFI (Shift+Mod+Key)
                 , ("M-S-<Return>", spawn "rofi -show run")
@@ -217,6 +217,8 @@
               , title =? "irssi"           --> doShift "<action=xdotool key super+9>irc</action>"
               , (className =? "Firefox" <&&> resource =? "Dialog") --> doFloat  -- Float Firefox Dialog
             ] 
+
+        --    <+> namedScratchpadManageHook myScratchPads
         
         ------------------------------------------------------------------------
         --- LAYOUTS
@@ -240,16 +242,16 @@
         
         myTitleTheme :: Theme
         myTitleTheme = def {
-                fontName			= "Berkeley Mono Nerd Font:style=Regular"
-	            , inactiveBorderColor   = "#44475A"
-	            , inactiveColor		    = "#44475A"
-	            , inactiveTextColor	    = "#50FA7B"
-	            , activeBorderColor	    = "#BD93F9"
-	            , activeColor			= "#BD93F9"
-	            , activeTextColor		= "#44475A"
-	            , urgentBorderColor	    = "#50FA7B"
-	            , urgentTextColor		= "#44475A"
-	            , urgentColor			= "#50FA7B"
+                fontName			= "xft:Berkeley Mono Nerd Font:style=Regular:pixelsize=11"
+	            , inactiveBorderColor   = "#282A36"
+	            , inactiveColor		    = "#282A36"
+	            , inactiveTextColor	    = "#BD93F9"
+	            , activeBorderColor	    = "#282A36"
+	            , activeColor			= "#282A36"
+	            , activeTextColor		= "#50FA7B"
+	            , urgentBorderColor	    = "#FF4242"
+	            , urgentTextColor		= "#262626"
+	            , urgentColor			= "#FF4242"
 	            , decoHeight			= 12 
         
         }
