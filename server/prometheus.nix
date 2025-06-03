@@ -1,8 +1,10 @@
-#------------------------------------------
-# MODULE: Prometheus
-# TODO: change "job_name" to machine name
-#------------------------------------------
-#
+#----------------------------------------------------
+# MODULE:   prometheus.nix
+# FUNCTION: configuration for prometheus
+# AUTHOR:   0x17
+# MAIL:     post@nerdbude.com
+# MASTODON: https://corteximplant.com/@0x17
+#-----------------------------------------------------
 
 { pkgs, config, ... }:
 {

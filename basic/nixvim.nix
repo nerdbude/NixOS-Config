@@ -1,19 +1,10 @@
-#
-# 8"""8 8"""" 8"""8  8""""8 8""""8   8   8 8""""8 8""""
-# 8   8 8     8   8  8    8 8    8   8   8 8    8 8
-# 8e  8 8eeee 8eee8e 8e   8 8eeee8ee 8e  8 8e   8 8eeee
-# 88  8 88    88   8 88   8 88     8 88  8 88   8 88
-# 88  8 88    88   8 88   8 88     8 88  8 88   8 88
-# 88  8 88eee 88   8 88eee8 88eeeee8 88ee8 88eee8 88eee
-#
-#[website] https://www.nerdbude.com
-#[mail] post@nerdbude.com
-#[mastodon] @0x17@corteximplant.com
-#[github] https://www.github.com/nerdbude
-#
-#======================================================
-# CONFIG FOR NIXVIM 
-#======================================================
+#----------------------------------------------------
+# MODULE:   nixvim.nix
+# FUNCTION: configuration for nvim in nix 
+# AUTHOR:   0x17
+# MAIL:     post@nerdbude.com
+# MASTODON: https://corteximplant.com/@0x17
+#-----------------------------------------------------
 
 { modules, config, pkgs, lib, ... }:
 

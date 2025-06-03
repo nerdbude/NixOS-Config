@@ -1,3 +1,11 @@
+#----------------------------------------------------
+# MODULE:   synapse.nix
+# FUNCTION: configuration for synapse
+# AUTHOR:   0x17
+# MAIL:     post@nerdbude.com
+# MASTODON: https://corteximplant.com/@0x17
+#-----------------------------------------------------
+
 { pkgs, lib, config, ... }:
 {
   services.postgresql.enable = true;

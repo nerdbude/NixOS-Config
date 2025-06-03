@@ -1,3 +1,11 @@
+#----------------------------------------------------
+# MODULE:   jellyfin.nix
+# FUNCTION: configuration for jellyfin
+# AUTHOR:   0x17
+# MAIL:     post@nerdbude.com
+# MASTODON: https://corteximplant.com/@0x17
+#-----------------------------------------------------
+
 { pkgs,  ... }:
 {
   services.jellyfin = {

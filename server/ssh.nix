@@ -1,8 +1,11 @@
-#-----------------------------
-# MODULE: ssh.nix
-# TODO: -
-#-----------------------------
-#
+#----------------------------------------------------
+# MODULE:   ssh.nix
+# FUNCTION: configuration for ssh
+# AUTHOR:   0x17
+# MAIL:     post@nerdbude.com
+# MASTODON: https://corteximplant.com/@0x17
+#-----------------------------------------------------
+
 { config, pkgs, ... }:
 {
   services.openssh.enable = true;

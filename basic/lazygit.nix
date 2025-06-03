@@ -1,8 +1,10 @@
-# NIX MODULE FOR LAZYGIT
-# Author: 0x17
-# Mail: post@nerdbude.com
-# Mastodon: https://corteximplant.com/@0x17
-#
+#----------------------------------------------------
+# MODULE:   lazygit.nix
+# FUNCTION: configuration for lazygit
+# AUTHOR:   0x17
+# MAIL:     post@nerdbude.com
+# MASTODON: https://corteximplant.com/@0x17
+#-----------------------------------------------------
 {config, pkgs, ... }:
 {
   programs.lazygit = {

@@ -1,3 +1,11 @@
+#----------------------------------------------------
+# MODULE:   nixmonad.nix
+# FUNCTION: configuration for XMonad
+# AUTHOR:   0x17
+# MAIL:     post@nerdbude.com
+# MASTODON: https://corteximplant.com/@0x17
+#-----------------------------------------------------
+
 { modules, config, pkgs, ... }:
 
 {

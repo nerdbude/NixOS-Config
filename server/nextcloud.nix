@@ -1,3 +1,10 @@
+#----------------------------------------------------
+# MODULE:   nextcloud.nix
+# FUNCTION: configuration for nextcloud
+# AUTHOR:   0x17
+# MAIL:     post@nerdbude.com
+# MASTODON: https://corteximplant.com/@0x17
+#-----------------------------------------------------
 { self, config, lib, pkgs, ... }:
 
 {

@@ -1,3 +1,11 @@
+#----------------------------------------------------
+# MODULE:   freshrss.nix
+# FUNCTION: configuration for freshrss
+# AUTHOR:   0x17
+# MAIL:     post@nerdbude.com
+# MASTODON: https://corteximplant.com/@0x17
+#-----------------------------------------------------
+
 { config, lib, ... }:
 
 {

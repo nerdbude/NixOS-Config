@@ -1,8 +1,11 @@
-#-----------------------------
-# MODULE: tools.nix
-# TODO: check tool-list befor rebuild 
-#
-#-----------------------------
+#----------------------------------------------------
+# MODULE:   tools.nix
+# FUNCTION: configuration for tools installed in system
+# AUTHOR:   0x17
+# MAIL:     post@nerdbude.com
+# MASTODON: https://corteximplant.com/@0x17
+#-----------------------------------------------------
+
 { config, pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [

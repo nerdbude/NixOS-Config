@@ -1,6 +1,12 @@
-{ config, pkgs, ... }:
+#----------------------------------------------------
+# MODULE:   blocky.nix
+# FUNCTION: configuration for blocky
+# AUTHOR:   0x17
+# MAIL:     post@nerdbude.com
+# MASTODON: https://corteximplant.com/@0x17
+#-----------------------------------------------------
 
-### BLOCKY CONFIG
+{ config, pkgs, ... }:
 
 {
   services.blocky = {

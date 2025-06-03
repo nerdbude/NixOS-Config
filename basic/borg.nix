@@ -1,3 +1,11 @@
+#-----------------------------------------------------------------
+# MODULE:    borg.nix
+# FUNCTION: automated backups
+# AUTHOR:    0x17
+# MAIL:          post@nerdbude.com
+# Mastodon: https://corteximplant.com/@0x17
+#-----------------------------------------------------------------
+
 services.borgbackup.jobs.NB-IF-00 = {
   paths = [ 
     "/home/null/"
