@@ -6,11 +6,11 @@
 # Mastodon: https://corteximplant.com/@0x17
 #-----------------------------------------------------------------
 
-{config, pkgs, ... }:
+{ modules, config, pkgs, ... }:
 {
 
   ## AUTO UPDATE
-  system.autoUpdate = {
+  system.autoUpgrade = {
     enable = true;
     persistent = true;
     dates = "12:00";
@@ -26,7 +26,7 @@
   systemd.timers.nixos-upgrade.timerConfig.WakeSystem = true;
 
   ## LOG ROTATE
-  environments.etc."logrotate.d/nixos-upgrade".text = "
+  environment.etc."logrotate.d/nixos-upgrade".text = "
     /var/log/nixos-upgrade.log {
       daily
       missingok
