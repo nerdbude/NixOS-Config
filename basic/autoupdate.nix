@@ -6,7 +6,7 @@
 # Mastodon: https://corteximplant.com/@0x17
 #-----------------------------------------------------------------
 
-{ modules, config, pkgs, ... }:
+{ modules, config, ... }:
 {
 
   ## AUTO UPDATE
@@ -87,7 +87,4 @@
       Persistent = true;
     };
   };
-
-  
-    
 }
