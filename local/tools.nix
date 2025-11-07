@@ -36,6 +36,7 @@
     tuir
     go-2fa
     btop
+    fastfetch
     nmap
     tldr
     zip
@@ -57,6 +58,7 @@
     zathura
     newsboat
     zellij
+    rpiboot
 
     # HASKELL
     ghc
@@ -88,6 +90,10 @@
     thunderbird
     nitrogen
     gimp
+
+    # NIX TOOLS
+    nixfmt-rfc-style
+
 
   ];
 }

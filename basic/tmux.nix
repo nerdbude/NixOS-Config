@@ -1,12 +1,6 @@
-#----------------------------------------------------
-# MODULE:   tmux.nix
-# FUNCTION: configuration for tmux
-# AUTHOR:   0x17
-# MAIL:     post@nerdbude.com
-# MASTODON: https://corteximplant.com/@0x17
-#-----------------------------------------------------
-
 { config, pkgs, ... }:
+
+### TMUX CONFIG
 
 {
 programs.tmux = {

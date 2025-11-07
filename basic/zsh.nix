@@ -5,19 +5,11 @@
 ### - bc
 let
 
-  geometryTheme = pkgs.fetchFromGitHub {
-    owner = "geometry-zsh";
-    repo = "geometry";
-    rev = "main";
-    sha256 = "FoOY7dkeYC7xQJkX06IDZdduXCfpDxB2aHoSludAMbI=";
-  };
-
-  nzshTheme = pkgs.fetchFromGitHub {
+  spookyTheme = pkgs.fetchFromGitHub {
     owner = "nerdbude";
-    repo = "nzsh";
+    repo = "spooky";
     rev = "main";
-    sha256 = "HQI1VUf5Y6MlpM6RXd13PPYSyF6H4Ot4qcodfLpUPck=";
-#    sha256 = "0000000000000000000000000000000000000000000000000000";
+    sha256 = "DF9eysodZyW0cdscvPXoakxNJrkUa/F0MT8b3X/O740=";
   };
 
 ### ZSH CONFIG
@@ -31,8 +23,8 @@ in
         enableLsColors = true;
         ohMyZsh = {
           enable = true;
-          custom = "${nzshTheme}";
-		  theme = "nzsh";
+          custom = "${spookyTheme}";
+		  theme = "spooky";
 		  plugins = [ "themes" "colorize" "git" "colored-man-pages" "ssh" ];
 		};
 

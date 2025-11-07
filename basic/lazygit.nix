@@ -1,10 +1,3 @@
-#----------------------------------------------------
-# MODULE:   lazygit.nix
-# FUNCTION: configuration for lazygit
-# AUTHOR:   0x17
-# MAIL:     post@nerdbude.com
-# MASTODON: https://corteximplant.com/@0x17
-#-----------------------------------------------------
 {config, pkgs, ... }:
 {
   programs.lazygit = {
@@ -62,7 +55,7 @@
       showFileIcons = true;
 
       commitAuthorShortLength = 2;
-      commitAuthorLongLength = "17";
+#      commitAuthorLongLength = "17";
       commitHashLength = 8;
 
       showBranchCommitHash = false;

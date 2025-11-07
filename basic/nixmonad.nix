@@ -1,12 +1,4 @@
-#----------------------------------------------------
-# MODULE:   nixmonad.nix
-# FUNCTION: configuration for XMonad
-# AUTHOR:   0x17
-# MAIL:     post@nerdbude.com
-# MASTODON: https://corteximplant.com/@0x17
-#-----------------------------------------------------
-
-{ modules, config, pkgs, ... }:
+{ ... }:
 
 {
   services.xserver = {
@@ -116,8 +108,8 @@
                 , layoutHook         = myLayoutHook
                 , workspaces         = myWorkspaces
                 , borderWidth        = myBorderWidth
-                , normalBorderColor  = "#282A36"
-                , focusedBorderColor = "#282A36"
+                , normalBorderColor  = "#44475A"
+                , focusedBorderColor = "#44475A"
                 } `additionalKeysP`         myKeys
         
         ------------------------------------------------------------------------
@@ -175,7 +167,7 @@
                 , ("M-<Tab>", sendMessage NextLayout)                              -- Switch to next layout
                 , ("M-S-<Space>", sendMessage ToggleStruts)                          -- Toggles struts
                 , ("M-S-n", sendMessage $ Toggle NOBORDERS)                          -- Toggles noborder
-	            , ("M-S-=", sendMessage (Toggle NBFULL) >> sendMessage ToggleStruts) -- Toggles noborder/full
+                , ("M-S-=", sendMessage (Toggle NBFULL) >> sendMessage ToggleStruts) -- Toggles noborder/full
                 , ("M-S-f", sendMessage (T.Toggle "float"))
                 , ("M-S-x", sendMessage $ Toggle REFLECTX)
                 , ("M-S-y", sendMessage $ Toggle REFLECTY)
@@ -251,11 +243,11 @@
         myTitleTheme :: Theme
         myTitleTheme = def {
                 fontName			= "xft:Berkeley Mono Nerd Font:style=Regular:pixelsize=11"
-	            , inactiveBorderColor   = "#282A36"
-	            , inactiveColor		    = "#282A36"
+	            , inactiveBorderColor   = "#44475A"
+	            , inactiveColor		    = "#44475A"
 	            , inactiveTextColor	    = "#BD93F9"
-	            , activeBorderColor	    = "#282A36"
-	            , activeColor			= "#282A36"
+	            , activeBorderColor	    = "#44475A"
+	            , activeColor			= "#44475A"
 	            , activeTextColor		= "#50FA7B"
 	            , urgentBorderColor	    = "#FF4242"
 	            , urgentTextColor		= "#262626"

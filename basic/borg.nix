@@ -1,11 +1,5 @@
-#-----------------------------------------------------------------
-# MODULE:    borg.nix
-# FUNCTION: automated backups
-# AUTHOR:    0x17
-# MAIL:          post@nerdbude.com
-# Mastodon: https://corteximplant.com/@0x17
-#-----------------------------------------------------------------
-
+{ config, pkgs, ... }:
+{
 services.borgbackup.jobs.NB-IF-00 = {
   paths = [ 
     "/home/null/"
@@ -24,8 +18,8 @@ services.borgbackup.jobs.NB-IF-00 = {
     "/home/null/.cargo"
   ];
   encryption.mode = "none";
-  envirnment.BORG_RSH = "ssh -p23 u342371@u342371.your-storagebox.de";
+  environment.BORG_RSH = "ssh -p23 u342371@u342371.your-storagebox.de";
   repo = "ssh://u342371@u342371.your-storagebox.de:23/backups/NB-IF-00";
-  compression = "auto,zst"
   startAt = "daily";
 };
+}
